@@ -22,13 +22,11 @@
 
         document.getElementById("container").innerHTML=this.responseText
          }
-    
         request.send();
         };
         </script>
     </head>
     <body>
-
       <h1>
         welcome to homepage
       </h1>  
@@ -39,5 +37,22 @@
       <h1><a href="about.html"> about </a></h1>
     <button onclick="loadBtn()">load about</button>
     <div id="container"></div>
-    </body>
+
+    ///using jquery
+    <button id ="jbtn">jQuery</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+   
+<script>
+$(document).ready(function(){
+    $("#jbtn").click(function () {
+
+$.get("data.json",function(data){
+    console.log("data from jquery")
+    console.log(data);
+});
+    });
+});
+</script>
+</body>
+
     </html>
